@@ -113,7 +113,7 @@
     <!--<script src="./js/GoogleClient.js" type="text/javascript" language="javascript"></script>-->
 
 </head>
-
+<script>  const SELECTEDIMAGE = 1;</script>
 <script>
     //load FolderInfo ,Json data_ Mingbo Peng Modified--------------------------------------------------------------------
 
@@ -868,8 +868,24 @@
 
             console.log("selectedImage",selectedImage.data()[0].scid);
             console.log("selectedImage",selectedImage.data()[0].img);
-
+            
+            // update value
+            SELECTEDIMAGE = selectedImage.data()[0].scid;
             console.log(imageLinkKeys);
+
+
+            websocketClient.onopen = function(){
+                //console.log("Client Connected");
+
+                /*
+                sendMessageButton.onclick = function(){
+                    console.log("click");
+                };
+                */
+            
+                websocketClient.send(SELECTEDIMAGE);
+            }
+
             // highlight the line graph
             graph.highlight(selectedImage.data());
 
