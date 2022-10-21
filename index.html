@@ -865,7 +865,10 @@
 
             var selectedImage = d3.select(this);
             console.log("selectedImage",selectedImage);
-            console.log("selectedImage",selectedImage.data());
+
+            console.log("selectedImage",selectedImage.data()[0].scid);
+            console.log("selectedImage",selectedImage.data()[0].img);
+
             console.log(imageLinkKeys);
             // highlight the line graph
             graph.highlight(selectedImage.data());
