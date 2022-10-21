@@ -683,7 +683,7 @@
             .on("click", function () {
                 var selSample = d3.select(this);
                 var id = selSample[0][0].id.replace("sample", "");
-
+                console.log(id);
                 var filePath = sampleFiles[id];
                 var settingFilePath =sampleSettingFiles[id];
 
