@@ -871,21 +871,10 @@
             
             // update value
             SELECTEDIMAGE = selectedImage.data()[0].scid;
-            console.log(imageLinkKeys);
+            console.log(SELECTEDIMAGE);
 
 
-            websocketClient.onopen = function(){
-                //console.log("Client Connected");
-
-                /*
-                sendMessageButton.onclick = function(){
-                    console.log("click");
-                };
-                */
-            
-                websocketClient.send(SELECTEDIMAGE);
-            }
-
+        
             // highlight the line graph
             graph.highlight(selectedImage.data());
 

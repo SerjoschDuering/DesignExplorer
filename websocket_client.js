@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const websocketClient = new WebSocket("ws://localhost:12345/");
     //const messageContainer = document.querySelector("#messageContainer");
-    //constMessageButton =  doctument-querySelector("[name=send_message_button]");
+    //const MessageButton =  doctument-querySelector("[name=send_message_button]");
 
     websocketClient.onopen = function(){
         console.log("Client Connected");
@@ -15,8 +15,9 @@ document.addEventListener("DOMContentLoaded", function(){
             console.log("click");
         };
         */
-       
-        websocketClient.send("hello");
+        d3.select("#thumbnails-btm")
+            .on("click", websocketClient.send(SELECTEDIMAGE))
+        
     }
 
 }, false)
