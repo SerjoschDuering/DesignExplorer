@@ -860,11 +860,13 @@
 
 
 
-        // update layout on select
+        // update layout on select <-----------------------------------------------------------------------------------
         function updateLayoutOnSelect() {
 
             var selectedImage = d3.select(this);
-
+            console.log("selectedImage",selectedImage);
+            console.log("selectedImage",selectedImage.data());
+            console.log(imageLinkKeys);
             // highlight the line graph
             graph.highlight(selectedImage.data());
 
