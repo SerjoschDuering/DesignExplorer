@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function(){
         };
         */
         d3.select("#thumbnails-btm")
-            .on("click", websocketClient.send(SELECTEDIMAGE))
+            .on("click", function(){websocketClient.send(SELECTEDIMAGE)}
+            )
         
     }
 
